@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="geral">    
+        <h1>Gerenciador de tarefas</h1>
+
+        <!-- criação de tarefas -->
+        <div class="adicionar-tarefa">
+            <input id="escreverTarefa" type="text" placeholder="Nome da nova tarefa..." />
+            <input id="prazoTarefa" type="date" />
+            <input id="comentarioTarefa" type="text" placeholder="Comentário (opcional)" />
+            <button onclick="adicionarTarefa()">+ Adicionar</button>
+        </div>
+
+        <!-- filtros -->
+        <div class="filtros">
+            <button class="filter-btn active" data-f="todas"     onclick="setFilter(this)">Todas</button>
+            <button class="filter-btn"        data-f="pendente"  onclick="setFilter(this)">Pendente</button>
+            <button class="filter-btn"        data-f="andamento" onclick="setFilter(this)">Em andamento</button>
+            <button class="filter-btn"        data-f="concluida" onclick="setFilter(this)">Concluída</button>
+        </div>
+
+        <!-- lista de tarefas -->
+        <div id="listaTarefas"></div>
+
+    </div>
+
+    <script src="funcoes.js"></script>
+</body>
+</html>
